@@ -11,7 +11,7 @@ a{
 .container{
     max-width: 960px;
     padding: 0 40px;
-    margin: 0 auto 80px;
+    margin: 0 auto 120px;
 }
 /* ----------------- ヘッダー ----------------- */
 .header{
@@ -106,6 +106,7 @@ a{
 }
 /* ----------------- 共通ボタン -----------------*/
 .hero_btn{
+    display: block;
     font-size: 1.6em;
     font-family: 'futura PT', 'noto sans japanese',sans-serif;
     font-weight: 400;
@@ -114,25 +115,37 @@ a{
     text-align: center;
     padding: 20px 0;
     margin: 0 auto;
+    cursor: pointer;
 }
-/* 作品エリア */
+.hero_btn:hover{
+    color: #fff;
+    background: #333;
+    transition: ease-in,0.3s;
+}
+
+/* ----------------- 作品エリア -----------------*/
 .works_list{
     display: flex;
     flex-wrap: wrap;   
-    justify-content: space-between;
 }
 .work{
-    width: 30%;
+    width: 300px;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin: 0 20px 30px 0;
+    
+}
+.work .work_box{
+    overflow: hidden;
 }
 .work .work_img{
     border-radius: 5px;
-    margin-bottom: 10px;
 }
-.work .work_text{
-  padding: 10px;
-  line-height: 1.2;  
+.work_box:hover .work_img{
+    opacity: .8;
+    transition: all,0.3s;
+}
+.work_box .work_text{
+  padding: 15px 0;
 }
 .work .work_text .work_ttl{
     font-size: 2em;
@@ -143,16 +156,117 @@ a{
     margin-bottom: 10px;
     border-bottom: 1px solid #ccc;
 }
-.work .work_text p{
+.work .work_text .work_description{
     font-size: 1.4rem;
     font-family: 'futura PT', 'noto sans japanese',sans-serif;
     font-weight: 300;
     color: #333;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 .work .work_text .work_tag{
     font-size: 1.2rem;
     font-family: 'futura PT', 'noto sans japanese',sans-serif;
     font-weight: 300;
     color: #808080;
+}
+
+/* ----------------- について -----------------*/
+.about_box{
+    display: flex;   
+}
+.about_img{
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.about_text .about_ttl{
+    font-size: 2.8rem;
+    font-family: 'futura PT', 'noto sans japanese',sans-serif;
+    font-weight: 500;
+    color: #333;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.about_text .about_description{
+    font-size: 1.6rem;
+    font-family: 'futura PT', 'noto sans japanese',sans-serif;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+TODO:ボタンを画像の下と揃え
+
+/* ----------------- contact -----------------*/
+
+.contact_area{
+    width: 100%;
+    height: 200px;
+    background: #aaa;
+}
+.contact_text .contact_ttl{
+    font-size: 2.8rem;
+    font-family: 'futura PT', 'noto sans japanese',sans-serif;
+    font-weight: 500;
+    color: #333;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.contact_text .contact_description{
+    font-size: 1.6rem;
+    font-family: 'futura PT', 'noto sans japanese',sans-serif;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* snsリスト */
+
+.sns_list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -8px;
+    padding-bottom: 80px;
+}
+.sns_list> li{
+    padding: 0 8px ;
+}
+.sns_list a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #c7c7c7;
+    border-radius: 50%;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+.sns_list a:hover{
+    background: #333;
+}
+.sns_list a:before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.sns_list .about_facebook a::before{
+    background: url(/img/sns_ico/ico_facebook.svg)no-repeat center center;
+}
+.sns_list .about_instagram a::before{
+    background: url(/img/sns_ico/ico_instagram.svg)no-repeat center center;
+}
+.sns_list .about_mail a::before{
+    background: url(/img/sns_ico/ico_mail.svg)no-repeat center center;
 }
