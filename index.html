@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <title>Photograph</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
@@ -12,29 +13,29 @@
 
 <body>
     <!-- ヘッダー -->
-    <header class="header">
+    <header id="header">
         <div class="area_logo">
             <a href="">
                 <h1>PHOTOGRAPHY</h1>
             </a>
         </div>
-        <nav class="nav_header">
-            <ul class="list_nav">
-                <li><a href="">WORKS</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">CONTACT</a></li>
+        <nav id="list_nav">
+            <ul>
+                <li><a href="#works_area">WORKS</a></li>
+                <li><a href="#about_area">ABOUT</a></li>
+                <li><a href="#contact_area">CONTACT</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <!-- メインビュー -->
-        <section class="main_view">
+        <div class="main_view">
             <div class="container">
                 <p class="ttl">GOOD MEMORIES</p>
                 <p class="description">日々の写真</p>
             </div>
-        </section>
-        <section class="works_area">
+        </div>
+        <section id="works_area" class="scroll_point">
             <div class="container">
                 <div class="hero_ttl_area">
                     <h2 class="hero_ttl">WORKS</h2>
@@ -161,33 +162,35 @@
                         </li>
                     </ul>
                 </div>
-                <a class="hero_btn">Read More</a>
+                <a class="hero_btn">View More</a>
             </div>
         </section>
-        <section class="about_area">
-            <div class="container">
-                <div class="hero_ttl_area">
-                    <h2 class="hero_ttl">ABOUT</h2>
-                    <p class="hero_subttl">カメラマンについて</p>
-                </div>
-                <div class="about_box">
-                    <img src="https://picsum.photos/id/1011/600/400" alt="北海道" class="about_img">
-                    <div class="about_right">
-                        <div class="about_text">
-                            <h3 class="about_ttl">田中由香</h3>
-                            <p class="about_description">Lorem ipsum dolor sit, amet consectetur adipisicing
-                                elit. Voluptatem facilis deserunt tempora vero, commodi quia enim cumque non
-                                voluptas rem ipsa, eaque consectetur! Aspernatur minus placeat ipsum?
-                                Perspiciatis, optio saepe? </p>
-                        </div>
-                        <div class="about_btn">
-                            <a class="hero_btn">Read More</a>
+        <section id="about_area" class="scroll_point">
+            <div class="about_bg_box">
+                <div class="container">
+                    <div class="hero_ttl_area">
+                        <h2 class="hero_ttl">ABOUT</h2>
+                        <p class="hero_subttl">カメラマンについて</p>
+                    </div>
+                    <div class="about_box">
+                        <img src="https://picsum.photos/id/1011/600/400" alt="北海道" class="about_img">
+                        <div class="about_right">
+                            <div class="about_text">
+                                <h3 class="about_ttl">田中由香</h3>
+                                <p class="about_description">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit. Voluptatem facilis deserunt tempora vero, commodi quia enim cumque non
+                                    voluptas rem ipsa, eaque consectetur! Aspernatur minus placeat ipsum?
+                                    Perspiciatis, optio saepe? </p>
+                            </div>
+                            <div class="about_btn">
+                                <a class="hero_btn">View More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="contact_area">
+        <section id="contact_area" class="scroll_point">
             <div class="container">
                 <div class="hero_ttl_area">
                     <h2 class="hero_ttl">CONTACT</h2>
@@ -200,8 +203,8 @@
                             <td class="contact_body">
                                 <select name="お問い合わせ内容" class="form_select">
                                     <option value="">お仕事の依頼・相談</option>
-                                    <option value="">撮影の種類</option>
-                                    <option value="">その他</option>
+                                    <option value="">撮影機材のレンタル</option>
+                                    <option value="">その他のご相談</option>
                                 </select>
                             </td>
                         </tr>
@@ -229,43 +232,29 @@
                                 <textarea name="問い合わせ" class="form_textarea"></textarea>
                             </td>
                         </tr>
-                        <!-- 後ほど送信ボタンを作成 -->
                     </table>
+                    <!-- 後ほど送信ボタンを作成 -->
+                    <input type="submit" value="送信" class="hero_btn">
                 </form>
+
             </div>
         </section>
-        <!-- <section class="contact_area">
-            <div class="container">
-                <div class="hero_ttl_area">
-                    <h2 class="hero_ttl">CONTACT</h2>
-                    <p class="hero_subttl">お問い合わせ</p>
-                </div>
-                <div class="contact_box">
-                    <div class="contact_text">
-                        <h3 class="contact_ttl">お問い合わせ</h3>
-                        <p class="contact_description">Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Voluptatem facilis deserunt tempora vero, commodi quia enim cumque non
-                            voluptas rem ipsa, eaque consectetur! Aspernatur minus placeat ipsum?
-                            Perspiciatis, optio saepe? </p>
-                    </div>
-                    <a class="hero_btn">Read More</a>
 
-                </div>
-            </div>
-        </section> -->
     </main>
     <footer>
         <div class="sns">
-            <!-- <p>Follow me</p> -->
             <ul class="sns_list">
                 <li class="about_facebook"><a href=""></a></li>
                 <li class="about_instagram"><a href=""></a></li>
                 <li class="about_mail"><a href=""></a></li>
             </ul>
         </div>
-
-        <!-- <p>copyright</p> -->
+        <p>©️copyright</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--自作のJS-->
+    <script src="/original.js"></script>
 </body>
 
 </html>
